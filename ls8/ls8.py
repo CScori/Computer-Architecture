@@ -3,9 +3,11 @@
 """Main."""
 
 import sys
-from cpu import *
+from cpu_table import *
 
 cpu = CPU()
 
-cpu.load()
+file_name = sys.argv[1]
+
+cpu.load(file_name)
 cpu.run()
