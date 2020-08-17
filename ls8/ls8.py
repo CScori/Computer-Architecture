@@ -1,13 +1,16 @@
+  
 #!/usr/bin/env python3
 
 """Main."""
 
 import sys
-from cpu_table import *
+from cpu import *
 
 cpu = CPU()
 
-file_name = sys.argv[1]
 
-cpu.load(file_name)
-cpu.run()
+if len(sys.argv) > 1:
+    cpu.load(sys.argv[1])
+    cpu.run()
+else:
+    print('select program to run')
